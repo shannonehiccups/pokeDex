@@ -19,8 +19,8 @@ async function getPokemonData(id){
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokemonData = await axios.get(url); 
     console.log(pokemonData); 
-    console.log(pokemon.data.sprites.front_shiny);
-    console.log(pokemon.data.name);
+    console.log(pokemonData.data.sprites.front_shiny);
+    console.log(pokemonData.data.name);
     createPokeCard(pokemonData);
 }
 
@@ -32,6 +32,6 @@ async function getPokemon(){
         console.log(i);
         await getPokemonData(i);
     }
-}
+}``
 
 getPokemon();
